@@ -131,7 +131,7 @@ export async function run(): Promise<void> {
       }
     }
 
-    core.debug(`Uploading ${files.length} files: ${JSON.stringify(files)}`);
+    core.debug(`##HD## Uploading ${files.length} files: ${JSON.stringify(files)}`);
 
     // Emit a helpful warning in case people specify the wrong directory.
     if (files.length === 0) {
