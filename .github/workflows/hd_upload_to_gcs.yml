@@ -23,7 +23,7 @@ jobs:
         credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
     - id: 'upload-file'
-      uses: './'
+      uses: '../'
       with:
         path: 'hd_sample_data.txt'
         destination: 'amex-test-batch-data/actions/output/'
