@@ -15,6 +15,7 @@
  */
 
 import * as path from 'path';
+import * as core from '@actions/core';
 
 import {
   IdempotencyStrategy,
@@ -172,7 +173,7 @@ export class Client {
         totalTimeout: 500,
       },
     };
-
+    core.info(`API Endpoint ${options.apiEndpoint}`)
     this.storage = new Storage(options);
   }
 
