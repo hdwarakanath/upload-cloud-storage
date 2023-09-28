@@ -163,6 +163,7 @@ export class Client {
     const options: StorageOptions = {
       projectId: opts?.projectID,
       userAgent: userAgent,
+      apiEndpoint: "https://www.storage.googleapis.com",
 
       retryOptions: {
         autoRetry: true,
@@ -173,8 +174,8 @@ export class Client {
         totalTimeout: 500,
       },
     };
-    core.info(`Project ID: ${options.projectId}`)
-    core.info(`API Endpoint ${options.apiEndpoint}`)
+    core.info(`Project ID: ${options.projectId}`);
+    core.info(`API Endpoint ${options.apiEndpoint}`);
     this.storage = new Storage(options);
   }
 
