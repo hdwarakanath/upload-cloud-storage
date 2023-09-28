@@ -25,7 +25,7 @@ jobs:
     - id: 'upload-file'
       uses: './'
       with:
-        path: 'hd_sample_file.txt'
+        path: 'hd_sample_data.txt'
         destination: 'amex-test-batch-data/actions/output/'
         project_id: 'pso-amex-data-platform'
         process_gcloudignore: false
