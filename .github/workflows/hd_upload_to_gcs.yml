@@ -1,0 +1,31 @@
+name: Upload to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your main branch name
+
+jobs:
+  job_upload_to_gcs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+  
+    steps:
+    - id: 'checkout'
+      uses: 'actions/checkout@v4'
+
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+
+    - id: 'upload-file'
+      uses: './'
+      with:
+        path: 'hd_sample_data.txt'
+        destination: 'amex-test-batch-data/actions/output/'
+        project_id: 'pso-amex-data-platform'
+        process_gcloudignore: false
