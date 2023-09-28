@@ -173,6 +173,7 @@ export class Client {
         totalTimeout: 500,
       },
     };
+    core.info(`Project ID: ${options.projectId}`)
     core.info(`API Endpoint ${options.apiEndpoint}`)
     this.storage = new Storage(options);
   }
