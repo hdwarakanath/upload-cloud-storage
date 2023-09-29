@@ -163,7 +163,7 @@ export class Client {
     const options: StorageOptions = {
       projectId: opts?.projectID,
       userAgent: userAgent,
-      apiEndpoint: "storage.google.com",
+      apiEndpoint: "https://storage.googleapis.com",
 
       retryOptions: {
         autoRetry: true,
