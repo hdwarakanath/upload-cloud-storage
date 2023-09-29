@@ -26,6 +26,6 @@ jobs:
       uses: 'hdwarakanath/upload-cloud-storage@main'
       with:
         path: 'hd_sample_data.txt'
-        destination: 'amex-test-batch-data/actions/output/'
-        project_id: 'pso-amex-data-platform'
+        destination: 'hd-artifacts/actions/output/'
+        project_id: 'trup-amex-prod'
         process_gcloudignore: false
